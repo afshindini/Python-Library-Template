@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "{{cookiecutter.package_name}}"
+version = "{{cookiecutter.version}}"
+description = "{{cookiecutter.project_description}}"
+authors = ["{{cookiecutter.authors}} <{{cookiecutter.authors}}>"]
+readme = "README.md"
+packages = [{include = "{{cookiecutter.package_name}}", from = "src"}]
+
+[tool.poetry.scripts]
+{{cookiecutter.package_name}} = "{{cookiecutter.package_name}}.main:{{cookiecutter.package_name}}_cli"
+
+[tool.pylint.format]
+max-line-length=150     # This defines the maximum number of characters on a single line in pylint
+
+[tool.pylint.design]
+max-attributes=10
+max-positional-arguments=6
+max-args=6
+
+[tool.pylint.messages_control]
+disable=["fixme"]
+
+[tool.pylint.similarities]
+min-similarity-lines = 8    # Minimum lines number of a similarity.
+ignore-imports = true       # Ignore imports when computing similarities.
+
+[tool.coverage.run]
+omit = ["tests/*"]
+branch = true
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+coverage = "^7.6"
+pytest-cov = "^6.0"
+pylint = "^3.3.1"
+black = "^24.10.0"
+mypy = "^1.13.0"
+bump2version = "^1.0.1"
+bandit = "^1.7.10"
+pre-commit = "^4.0.1"
+detect-secrets = "^1.5"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
