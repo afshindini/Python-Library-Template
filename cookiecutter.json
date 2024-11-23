@@ -1,0 +1,8 @@
+{
+  "project_name": "python-library",
+  "package_name": "{{ cookiecutter.project_name|lower|replace('python-','')|replace('-','_')|replace(' ','_') }}",
+  "project_description": "Short description for the project",
+  "version": "0.1.0",
+  "authors": "Afshin Dini",
+  "email": "afshin_dini@yahoo.com"
+}
