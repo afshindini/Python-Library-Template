@@ -1,0 +1,16 @@
+# Python Library Template
+This is a general template for developing python projects.
+It mainly uses poetry and pre-commit libraries to make thos whole checking and developing code semi-automatically.
+
+## How to Use
+To use the code do as following:
+- Install cookiecutter from [here](https://pypi.org/project/cookiecutter/).
+- run `cookiecutter git@gitlab.com:advian-oss/python-lib_template.git`.
+- Enter project name (better to be ib format of python-NAME).
+- Enter package name (The default will be based on the project name).
+- Enter short description for the project.
+- Enter version (Better to keep the default one).
+- Enter Firstname and Lastname.
+- Enter your email.
+
+
