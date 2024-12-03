@@ -24,6 +24,12 @@ disable=["fixme"]
 min-similarity-lines = 8    # Minimum lines number of a similarity.
 ignore-imports = true       # Ignore imports when computing similarities.
 
+[tool.pytest.ini_options]
+junit_family="xunit2"
+addopts="--cov={{cookiecutter.package_name}} --cov-fail-under=65 --cov-branch"
+asyncio_mode="strict"
+
+
 [tool.coverage.run]
 omit = ["tests/*"]
 branch = true
